@@ -11,7 +11,7 @@ type DBConfig = {
 
 const localDBConfig: DBConfig = {
   config: {
-    region: REGION,
+    region: REGION || 'eu-central-1',
     accessKeyId: '1',
     secretAccessKey: '2',
     endpoint: 'http://localhost:8000',

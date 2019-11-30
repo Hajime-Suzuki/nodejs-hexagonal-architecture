@@ -5,6 +5,7 @@
       "@utils/*": ["utils/*"],
       "@hotels/*": ["hotels/*"]
     },
+    "esModuleInterop": true,
     "lib": ["es2017"],
     "moduleResolution": "node",
     "noUnusedLocals": false,

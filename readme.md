@@ -1,4 +1,4 @@
-# NodeJS Hexagonal Architecture Example
+# NodeJS Hexagonal Architecture Example (work in progress)
 
 ## About This App
 
@@ -20,7 +20,7 @@ In this app, I build hotel booking api.
 ### Use Cases
 
 - find information of hotel H
-- (find information of hotels in Amsterdam) // For keep this app simple, I don't implement this one this time. But it's possible with GSI
+- (find information of hotels in Amsterdam) // To keep this project simple, I don't implement this one. But it's possible with GSI
 
 ---
 

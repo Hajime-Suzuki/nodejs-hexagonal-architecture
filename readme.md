@@ -11,6 +11,12 @@ In this app, I build hotel booking api.
 - AWS Lambda
 - AWS DynamoDB
 
+### How to Run
+
+- `yarn install`
+- `yarn sls dynamodb install` (Java Runtime Engine (JRE) version 6.x is required) https://www.npmjs.com/package/serverless-dynamodb-local
+- `yarn dev` to run local server. this also dynamodb local
+
 ### Use Cases
 
 - find information of hotel H
@@ -44,7 +50,7 @@ In this app, I build hotel booking api.
 | user_1 (userId)               | user                              |
 | bk_user_1 (userId)            | 2019-12-10 (date)                 |
 
-#### query pattern
+#### query patterns
 
 - find information of hotel 1 -> PK=hotel_1 SK=hotel
 

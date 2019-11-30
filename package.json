@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "nodejs-hexagonal-architecture",
   "scripts": {
-    "dev": "sls offline start",
+    "dev": "AWS_XRAY_CONTEXT_MISSING=LOG_ERROR  sls offline start",
     "deploy:dev": "sls deploy --stage dev",
     "lint": "eslint --fix 'src/**'",
     "dynamodb:stop": "lsof -ti:8000 | xargs kill",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@aws/dynamodb-data-mapper": "^0.7.3",
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
+    "aws-xray-sdk": "^2.5.0",
     "date-fns": "^2.8.0",
     "validator": "^12.0.0"
   },

@@ -1,5 +1,5 @@
 Resources:
-  surveyTable:
+  mainTable:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: ${self:provider.environment.TABLE_NAME}

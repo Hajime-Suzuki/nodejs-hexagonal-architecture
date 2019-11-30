@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@hotels/*": ["hotels/*"]
     },
     "lib": ["es2017"],
     "moduleResolution": "node",
@@ -19,6 +20,6 @@
     "strictNullChecks": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**"],
+  "include": ["src/"],
   "exclude": ["node_modules"]
 }

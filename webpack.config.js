@@ -12,6 +12,7 @@ module.exports = {
     extensions: ['.json', '.ts'],
     alias: {
       '@utils': path.resolve(__dirname, './src/utils'),
+      '@hotels': path.resolve(__dirname, './src/hotels'),
     },
   },
 

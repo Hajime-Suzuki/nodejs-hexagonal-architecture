@@ -13,6 +13,7 @@ provider:
   environment:
     STAGE: ${self:provider.stage}
     TABLE_NAME: ${self:provider.stage}-${self:service.name}
+    REGION: ${self:provider.region}
   tracing:
     apiGateway: true
     lambda: true
@@ -25,7 +26,7 @@ provider:
         - dynamodb:UpdateItem
         - dynamodb:BatchWriteItem
       Resource:
-        - '#{surveyTable.Arn}'
+        - '#{mainTable.Arn}'
 
     - Effect: Allow
       Action:
@@ -42,11 +43,11 @@ custom:
       migrate: true
       seed: true
       inMemory: true
-    # seed:
-    #   dev:
-    #     sources:
-    #       - table: dev-${self:service.name}
-    #         sources: ['']
+    seed:
+      dev:
+        sources:
+          - table: dev-${self:service.name}
+            sources: ['.seeds/hotels.json']
 
   serverless-offline:
     port: 4000

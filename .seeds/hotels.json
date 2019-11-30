@@ -1,0 +1,24 @@
+[
+  {
+    "PK": "hotel_1",
+    "SK": "hotel",
+    "name": "Awesome Hotel",
+    "address": {
+      "street": "Some Street 1234",
+      "city": "Amsterdam",
+      "state": "Noord-Holland",
+      "postalCode": "1234AB"
+    }
+  },
+  {
+    "PK": "hotel_2",
+    "SK": "hotel",
+    "name": "Good Hotel",
+    "address": {
+      "street": "Another Street 9876",
+      "city": "Amsterdam",
+      "state": "Noord-Holland",
+      "postalCode": "9876CD"
+    }
+  }
+]

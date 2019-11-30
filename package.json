@@ -1,0 +1,46 @@
+{
+  "name": "nodejs-hexagonal-architecture",
+  "version": "1.0.0",
+  "description": "nodejs-hexagonal-architecture",
+  "scripts": {
+    "dev": "sls offline start",
+    "deploy:dev": "sls deploy --stage dev",
+    "lint": "eslint --fix 'src/**'",
+    "dynamodb:stop": "lsof -ti:8000 | xargs kill",
+    "dynamodb:start": "sls dynamodb start"
+  },
+  "dependencies": {
+    "@aws/dynamodb-data-mapper": "^0.7.3",
+    "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
+    "date-fns": "^2.8.0",
+    "validator": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/jest": "^24.0.20",
+    "@types/node": "^12.11.7",
+    "@types/validator": "^10.11.3",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "aws-sdk": "^2.553.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "fork-ts-checker-webpack-plugin": "^2.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "serverless": "^1.54.0",
+    "serverless-dynamodb-local": "^0.2.38",
+    "serverless-offline": "^5.12.0",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "serverless-secrets-plugin": "^0.1.0",
+    "serverless-webpack": "^5.2.0",
+    "source-map-support": "^0.5.10",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.7.2",
+    "webpack": "^4.29.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

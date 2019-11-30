@@ -1,0 +1,9 @@
+test:
+  name: ${self:provider.stage}-${self:service.name}__test
+  description: 'test'
+  handler: src/test.handler
+  events:
+    - http:
+        path: '/'
+        method: get
+        cors: true

@@ -13,6 +13,8 @@ module.exports = {
     alias: {
       '@utils': path.resolve(__dirname, './src/utils'),
       '@hotels': path.resolve(__dirname, './src/hotels'),
+      '@bookings': path.resolve(__dirname, './src/bookings'),
+      '@rooms': path.resolve(__dirname, './src/bookings'),
     },
   },
 

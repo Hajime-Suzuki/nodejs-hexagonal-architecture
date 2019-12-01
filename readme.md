@@ -42,12 +42,13 @@ In this app, I build hotel booking api.
 
 ### Primary Key Design
 
-| Item    | Partition Key           | Sort Key                          |
-| ------- | ----------------------- | --------------------------------- |
-| hotel   | hotel_1 (hotelId)       | hotel                             |
-| room    | rooms_hotel_1 (hotelId) | room_1 (roomId)                   |
-| booking | bk_hotel_1 (hotelId)    | 2019-12-12_room_1 (date + roomId) |
-| user    | user_1 (userId)         | user                              |
+| Item         | Partition Key           | Sort Key                          |
+| ------------ | ----------------------- | --------------------------------- |
+| hotel        | hotel_1 (hotelId)       | hotel                             |
+| room         | rooms_hotel_1 (hotelId) | room_1 (roomId)                   |
+| availability | aval_hotel_1 (hotelId)  | 2019-12-12_room_1 (date + roomId) |
+| user         | user_1 (userId)         | user                              |
+| booking      | bk_user_1 (user_id)     | 2019-12-12 (check in date)        |
 
 #### query patterns
 
@@ -60,10 +61,10 @@ In this app, I build hotel booking api.
 
 ---
 
-- find all bookings of hotel 1 on Jan 1 2019 -> PK=bk_hotel_1, SK=2019-01-01
-- find all bookings of hotel 1 between day 2019-01-01 and 2019-01-30 -> PK=bk_hotel_1, SK between 2019-01-01 and 2019-01-30
+- find availabilities of rooms of hotel 1 on Jan 1 2019 -> PK=aval_hotel_1, SK=2019-01-01
+- find availabilities of rooms of hotel 1 between day 2019-01-01 and 2019-01-30 -> PK=aval_hotel_1, SK between 2019-01-01 and 2019-01-30
 
 ---
 
-- see information of booking B -> PK=bk_hotel_1 SK=2019-12-12_room1
-- see all bookings of user 1 -> GSI
+- find all bookings of user 1 -> PK=bk_user_1
+- find booking of user 1 on 2019-12-12 -> PK=bk_user_1 SK=2019-12-12

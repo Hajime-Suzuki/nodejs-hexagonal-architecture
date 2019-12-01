@@ -1,6 +1,6 @@
-import { Booking } from 'booking/domain/Booking'
+import { Booking } from '@bookings/domain/Booking'
 
-type BookingId = Booking['id'] // bk_hotel_1$2019-12-12_room_1 <- PK$SK
+type BookingId = Booking['id']
 type UserId = Booking['userId']
 
 export interface IBookingRepository {

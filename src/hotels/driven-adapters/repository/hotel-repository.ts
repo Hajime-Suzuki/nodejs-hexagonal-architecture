@@ -4,7 +4,7 @@ import { dbModelToHotel } from './data-mapper'
 import { BaseRepository } from '@utils/database/base-repository'
 import { mapper } from '@utils/database/mapper'
 import { Hotel } from '@hotels/domain/Hotel'
-import { IHotelRepository } from '@hotels/use-cases/ports/hotel-repository'
+import { IHotelRepository } from 'driver-ports/hotel-repository'
 
 type PrimaryKey = Pick<Hotel, 'id' | 'type'>
 

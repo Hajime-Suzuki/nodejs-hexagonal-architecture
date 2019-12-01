@@ -3,7 +3,9 @@
     "baseUrl": "./src",
     "paths": {
       "@utils/*": ["utils/*"],
-      "@hotels/*": ["hotels/*"]
+      "@hotels/*": ["hotels/*"],
+      "@bookings/*": ["bookings/*"],
+      "@rooms/*": ["rooms/*"]
     },
     "esModuleInterop": true,
     "lib": ["es2017"],

@@ -1,5 +1,5 @@
-import { IHotelRepository } from '../ports/hotel-repository'
 import { Hotel } from '@hotels/domain/Hotel'
+import { IHotelRepository } from 'driver-ports/hotel-repository'
 
 export interface FindHotelByIdUseCase {
   hotelRepository: Pick<IHotelRepository, 'findById'>

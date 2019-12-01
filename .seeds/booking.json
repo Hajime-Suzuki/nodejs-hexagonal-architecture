@@ -1,0 +1,10 @@
+[
+  {
+    "PK": "bk_user_1",
+    "SK": "booking_1",
+    "hotelId": 1,
+    "roomId": 100,
+    "checkInDate": "2019-12-12",
+    "checkOutDate": "2019-12-13"
+  }
+]

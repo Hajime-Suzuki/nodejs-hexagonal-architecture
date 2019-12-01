@@ -24,13 +24,13 @@ In this app, I build hotel booking api.
 
 ---
 
-- find information of room R of hotel H
-- find information of all rooms of hotel H
+- (find information of room R of hotel H)
+- (find information of all rooms of hotel H)
 
 ---
 
-- find availabilities of rooms of hotel H on the day of D.
-- find availabilities of rooms of hotel H between day D and D2
+- (find availabilities of rooms of hotel H on the day of D)
+- (find availabilities of rooms of hotel H between day D and D2)
 
 ---
 
@@ -42,13 +42,12 @@ In this app, I build hotel booking api.
 
 ### Primary Key Design
 
-| Partition Key                 | Sort Key                          |
-| ----------------------------- | --------------------------------- |
-| hotel_1 (hotelId)             | hotel                             |
-| rooms_hotel_1 (hotelId)       | room_1 (roomId)                   |
-| aval_hotel_1 (availabilityId) | 2019-12-12_room_1 (date + roomId) |
-| user_1 (userId)               | user                              |
-| bk_user_1 (userId)            | 2019-12-10 (date)                 |
+| Item    | Partition Key           | Sort Key                          |
+| ------- | ----------------------- | --------------------------------- |
+| hotel   | hotel_1 (hotelId)       | hotel                             |
+| room    | rooms_hotel_1 (hotelId) | room_1 (roomId)                   |
+| booking | bk_hotel_1 (hotelId)    | 2019-12-12_room_1 (date + roomId) |
+| user    | user_1 (userId)         | user                              |
 
 #### query patterns
 
@@ -61,9 +60,10 @@ In this app, I build hotel booking api.
 
 ---
 
-- find availabilities of rooms of hotel 1 on Jan 1 2019 -> PK=aval_1, SK=2019-01-01
-- find availabilities of rooms of hotel 1 between day 2019-01-01 and 2019-01-30 -> PK=aval_1, SK between 2019-01-01 and 2019-01-30
+- find all bookings of hotel 1 on Jan 1 2019 -> PK=bk_hotel_1, SK=2019-01-01
+- find all bookings of hotel 1 between day 2019-01-01 and 2019-01-30 -> PK=bk_hotel_1, SK between 2019-01-01 and 2019-01-30
 
 ---
 
-- see all bookings of user 1 -> PK=bk_user_1
+- see information of booking B -> PK=bk_hotel_1 SK=2019-12-12_room1
+- see all bookings of user 1 -> GSI

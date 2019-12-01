@@ -1,9 +1,9 @@
 test:
-  name: ${self:provider.stage}-${self:service.name}__test
-  description: 'test'
-  handler: src/test.handler
+  name: ${self:provider.stage}-${self:service.name}__find-hotel-by-id
+  description: 'find hotel by hotel id'
+  handler: src/hotels/use-cases/find-hotel-by-id/adapter.handler
   events:
     - http:
-        path: '/'
+        path: hotels/{id}
         method: get
         cors: true

@@ -13,8 +13,9 @@
     "@aws/dynamodb-data-mapper": "^0.7.3",
     "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
     "aws-xray-sdk": "^2.5.0",
-    "date-fns": "^2.8.0",
+    "date-fns": "^2.8.1",
     "reflect-metadata": "^0.1.13",
+    "shortid": "^2.2.15",
     "validator": "^12.0.0"
   },
   "devDependencies": {
